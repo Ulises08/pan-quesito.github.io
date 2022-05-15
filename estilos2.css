@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.slider{
+	width: 200px;
+	perspective: 1000px;
+	position: relative;
+	margin: auto;
+}
+.slider-carucel{
+	width: 100%;
+	position: absolute;
+	animation: rotar 90s infinite linear;
+	transform-style: preserve-3d;
+}
+.slider-carucel figure{
+	width: 120%;
+	height: 400px;
+	position: absolute;
+	overflow: hidden;
+
+}
+.slider-carucel figure:nth-child(1){transform: rotateY(45deg) translateZ(300px);}
+.slider-carucel figure:nth-child(2){transform: rotateY(90deg) translateZ(300px);}
+.slider-carucel figure:nth-child(3){transform: rotateY(135deg) translateZ(300px);}
+.slider-carucel figure:nth-child(4){transform: rotateY(180deg) translateZ(300px);}
+.slider-carucel figure:nth-child(5){transform: rotateY(225deg) translateZ(300px);}
+.slider-carucel figure:nth-child(6){transform: rotateY(270deg) translateZ(300px);}
+.slider-carucel figure:nth-child(7){transform: rotateY(315deg) translateZ(300px);}
+.slider-carucel figure:nth-child(8){transform: rotateY(360deg) translateZ(300px);}
+
+
+.slider-carucel img{
+	width: 100%;
+
+}
+@keyframes rotar{
+	from{
+		transform: rotateY(0deg);
+	}to{
+		transform: rotateY(360deg);
+	}
+}
+button {
+    margin: 50px;
+    position: relative;
+    padding: 20px 50px;
+    font-size: 10px;
+    border: none;
+    background: #033a3d;
+    color: rgba(255, 255, 255, .4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .3s;
+}
